@@ -5,7 +5,8 @@ export const getTitleAndYear = (): { title: string | null; year: string | null }
 }
 
 export const calculateSeries = (): boolean | undefined => {
-  const duration = document?.querySelector(".duration")?.textContent;
+  const duration = document?.querySelector(".videoMetadata--container .duration")?.textContent;
+
   const isSeries =
     duration?.includes("Seasons") ||
     duration?.includes("Episodes") ||

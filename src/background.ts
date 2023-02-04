@@ -8,29 +8,33 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       url: tab.url,
       type: 'URL_CHANGE'
     }, res => {
-      const searchQuery = res.title + (res.isSeries ? '' : ' ' + res.year);
+      if (res) {
+        const searchQuery = res.title + (res.isSeries ? '' : ' ' + res.year);
 
-      csfd
-        .search(searchQuery)
-        .then((response) => {
-          console.warn('CSFD movie found:', response, res.isSeries);
-          if (res.isSeries) {
-            return response.tvSeries[0];
-          } else {
-            return response.movies[0];
-          }
-        })
-        .then(movie => csfd.movie(movie.id))
-        .then(movie => {
-          chrome.tabs.sendMessage(tabId, {
-            message: 'movieFound',
-            movie,
-            type: 'MOVIE_FOUND',
+        csfd
+          .search(searchQuery)
+          .then((response) => {
+            console.warn('CSFD movie found:', response, res.isSeries);
+            if (res.isSeries) {
+              return response.tvSeries[0];
+            } else {
+              return response.movies[0];
+            }
           })
-        })
-        .catch((error) => {
-          throw new Error(error);
-        });
+          .then(movie => csfd.movie(movie.id))
+          .then(movie => {
+            chrome.tabs.sendMessage(tabId, {
+              message: 'movieFound',
+              movie,
+              type: 'MOVIE_FOUND',
+            })
+          })
+          .catch((error) => {
+            throw new Error(error);
+          });
+      } else {
+        console.warn('CSFD: No response from content script');
+      }
     });
   }
 });

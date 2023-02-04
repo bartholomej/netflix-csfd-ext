@@ -10,10 +10,8 @@ import Csfd from "./components/Csfd";
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   // Listen for messages sent from background.js
-  console.log("CSFD request", request);
   if (request.message === "sendingUrl") {
-    console.log("CSFD request.url", request.url);
-    if (request.url.includes("?jbv=") || request.url.includes("/title/")) {
+    if (request.url.includes("jbv=") || request.url.includes("/title/")) {
       const { title, year } = getTitleAndYear();
       if (title && year) {
         const isSeries = calculateSeries();
@@ -27,6 +25,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         );
 
         sendResponse({ title, year, isSeries });
+      } else {
+        console.error("CSFD – title or year not found", title, year);
       }
     }
   }
