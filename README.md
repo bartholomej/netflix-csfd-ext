@@ -5,13 +5,13 @@
 
 > Simple Chrome extension for **[Netflix](https://www.netflix.com)** which adds a small button within each **movie detail** to show information about **ČSFD** rating
 
-![Screenshot](https://raw.githubusercontent.com/bartholomej/netflix-csfd-ext/master/_assets/netflix-promo.png)
+![Screenshot](https://raw.githubusercontent.com/bartholomej/netflix-csfd-ext/master/_assets/screenshot.png)
 
 ## Installation
 
 ### Automatically (for humans)
 
-- **[Install for Chrome](https://chrome.google.com/webstore/detail/netflix-csfd/ihpngekoejodiligajlppbeedofhnmfm)** from official **Chrome Web Store** (TBD)
+- **[Install for Chrome](https://chrome.google.com/webstore/detail/netflix-csfd/eomgekccbddnlpmehgdjmlphndjgnlni)** from official **Chrome Web Store** (TBD)
 
 ### Manually (for ~~robots~~ developers)
 
