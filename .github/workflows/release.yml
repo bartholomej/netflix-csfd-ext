@@ -1,0 +1,39 @@
+name: Release Chrome Web Store
+
+on:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      # - name: Get the version tag
+      #   id: get_version
+      #   run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
+      - name: Build extension for Chrome
+        run: |
+          yarn
+          yarn build
+
+      - name: Deploy to Chrome Web Store
+        uses: trmcnvn/chrome-addon@v2
+        with:
+          extension: ihpngekoejodiligajlppbeedofhnmfm
+          zip: zip/chrome.zip
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+        env:
+          CI: true

@@ -1,0 +1,17 @@
+{
+  "appName": {
+    "message": "Netflix + ČSFD"
+  },
+  "appDesc": {
+    "message": "Jednoduché rozšíření pro Netflix, které do detailu filmu přidává tlačítko s odkazem na hodnocení filmu na webu ČSFD."
+  },
+  "appContent": {
+    "message": "Jednoduché rozšíření pro Netflix, které do každého detailu filmu přidává tlačítko s odkazem na hodnocení filmu na webu ČSFD... Rozšíření je neoficiální, experimentální a nemá nic společného se samotnou službou Netflix ❤️ ani s ČSFD..."
+  },
+  "attribution": {
+    "message": "Netflix + CSFD rozšíření do prohlížeče"
+  },
+  "notOfficial": {
+    "message": "Neoficiální rozšíření"
+  }
+}

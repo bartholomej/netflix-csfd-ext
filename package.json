@@ -1,0 +1,41 @@
+{
+  "name": "netflix-csfd-ext",
+  "version": "0.0.1",
+  "description": "Netflix extension adds a button within each movie detail to show information about ČSFD rating...",
+  "type": "module",
+  "repository": {
+    "url": "git+https://github.com/bartholomej/netflix-csfd-ext.git",
+    "type": "git"
+  },
+  "author": "Bartholomej <bart@bartweb.cz>",
+  "bugs": {
+    "url": "https://github.com/bartholomej/netflix-csfd-ext/issues"
+  },
+  "homepage": "https://github.com/bartholomej/netflix-csfd-ext#readme",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "release:patch": "git checkout master && npm version patch -m \"chore(update): patch release %s 🐛 \"",
+    "release:minor": "git checkout master && npm version minor -m \"chore(update): release %s 🚀\"",
+    "release:major": "git checkout master && npm version major -m \"chore(update): major release %s 💥 \"",
+    "postversion": "git push && git push --follow-tags"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.0.0-beta.12",
+    "@types/chrome": "^0.0.210",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-solid": "^2.5.0",
+    "vite-plugin-zip-pack": "^1.0.5"
+  },
+  "dependencies": {
+    "node-csfd-api": "3.0.0-next.8",
+    "solid-js": "^1.6.9"
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}

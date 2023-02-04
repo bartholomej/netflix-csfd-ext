@@ -1,0 +1,22 @@
+{
+  "appName": {
+    "message": "Netflix + CSFD",
+    "description": "Title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "Netflix extension adds a button within each movie detail to show information about ČSFD rating...",
+    "description": "Description of the application, displayed in the web store."
+  },
+  "appContent": {
+    "message": "Simple web extension for Netflix. Netflix extension adds a button within each movie detail to show information about ČSFD rating... This is unofficial, experimental, made for fun and it has nothing to do with Netflix ❤️ itself",
+    "description": "Description content of the application, displayed in the web store. (Manually updated)"
+  },
+  "attribution": {
+    "message": "Netflix + CSFD Extension for browsers",
+    "description": "Description attribution link"
+  },
+  "notOfficial": {
+    "message": "Unofficial extension",
+    "description": "Unofficial statement."
+  }
+}

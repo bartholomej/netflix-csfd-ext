@@ -1,0 +1,9 @@
+#csfd-ext .csfd-ext-attribution {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-align: right;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

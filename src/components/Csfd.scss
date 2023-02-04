@@ -1,0 +1,21 @@
+#csfd-ext {
+  display: flex;
+  flex-direction: column;
+
+  .csfd-ext-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .csfd-ext-title {
+    margin-block: 0;
+  }
+
+  hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #ccc, #fff, #ccc);
+  }
+}

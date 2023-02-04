@@ -1,0 +1,51 @@
+$good-color: #ba0305;
+$average-color: #658db4;
+$bad-color: #535353;
+$unknown-color: #d2d2d2;
+
+#csfd-ext .rating {
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  min-height: 32px;
+  display: inline-block;
+  background-color: $unknown-color !important;
+
+  &-good {
+    background-color: $good-color !important;
+
+    &:hover {
+      color: $good-color !important;
+    }
+  }
+
+  &-average {
+    background-color: $average-color !important;
+
+    &:hover {
+      color: $average-color !important;
+    }
+  }
+
+  &-bad {
+    background-color: $bad-color !important;
+
+    &:hover {
+      color: $bad-color !important;
+    }
+  }
+
+  &-unknown {
+    background-color: $unknown-color !important;
+
+    &:hover {
+      color: $unknown-color !important;
+    }
+  }
+
+  &:hover {
+    background: white !important;
+  }
+}
