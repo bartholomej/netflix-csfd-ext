@@ -1,7 +1,11 @@
-export const getTitleAndYear = (): { title: string | null; year: string | null } => {
-  const title = (document.querySelector('.storyArt.detail-modal img') as HTMLImageElement)?.alt ?? null;
-  const year = document.querySelector('.year')?.textContent ?? null;
-  return { title, year };
+export const getTitleAndYear = async (): Promise<{ title: string | null; year: string | null }> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const title = (document.querySelector('.storyArt.detail-modal img') as HTMLImageElement)?.alt ?? null;
+      const year = document.querySelector('.year')?.textContent ?? null;
+      resolve({ title, year });
+    }, 500); // This is a hack to wait for the DOM to load
+  });
 }
 
 export const calculateSeries = (): boolean | undefined => {
