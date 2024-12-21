@@ -1,6 +1,6 @@
 {
   "name": "netflix-csfd-ext",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Netflix extension adds a button within each movie detail to show information about ČSFD rating...",
   "type": "module",
   "repository": {
